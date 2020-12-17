@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 3px;
+  background: #264057;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+}
+
+.wrapper {
+  position: relative;
+  margin: 50px 50px;
+  width: 100%;
+  background-color: white;
+  position: relative;
+  animation: wrappernormal 3s forwards;
+}
+
+@keyframes wrappernormal {
+  from {
+    left: 40%;
+  }
+  to {
+    left: 0;
+  }
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background: #5F98CD;
+}
+
+.input {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  width: 75%;
+  border: none;
+  border-radius: 30px;
+  height: 30px;
+  padding: 15px;
+  display: none;
+  transition: all 2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-radius: 30px;
+  border: 1px solid #B2DAFF;
+}
+
+.-input-active {
+  left: 15px;
+  display: block;
+}
+
+.hamburger-icon {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 30px;
+  height: 30px;
+}
+
+.hamburger-icon:hover {
+  cursor: pointer;
+}
+
+.line-1-container,
+.line-2 {
+  width: 100%;
+}
+
+.line-1-container {
+  display: flex;
+  align-items: center;
+}
+
+.line-1 {
+  height: 3px;
+  background: #B2DAFF;
+  width: 70%;
+  border-radius: 3px;
+}
+
+.circle-icon {
+  width: 28%;
+  height: 8px;
+  background: #B2DAFF;
+  border-radius: 50%;
+  margin-left: 1px;
+}
+
+.line-2 {
+  height: 3px;
+  background: #B2DAFF;
+  width: 100%;
+  border-radius: 3px;
+}
+
+.navbar h4 {
+  color: white;
+}
+
+.show-input-btn {
+  background: transparent;
+  border: 1px solid #B2DAFF;
+  height: 10px;
+  width: 10px;
+}
+
+.show-input-btn:hover {
+  cursor: pointer;
+}
+
+.menu-list {
+  position: absolute;
+  background: #43627D;
+  height: 70%;
+  width: 50%;
+  top: 60px;
+  left: 50px;
+  color: #8CABC6;
+  border-radius: 3px;
+  z-index: -99;
+  animation: moveback 3s forwards;
+}
+
+@keyframes moveback {
+  from {
+    left: 40px;
+  }
+  to {
+    left: 50px;
+  }
+}
+.menu-list ul {
+  height: 90%;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  left: 0;
+}
+
+.menu-list ul li {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.square {
+  background: transparent;
+  border: 1px solid #B2DAFF;
+  height: 10px;
+  width: 8px;
+}
+
+.text {
+  float: left;
+  width: 70%;
+}
+
+.-wrapper-active {
+  animation: movetoright 3s forwards;
+}
+
+@keyframes movetoright {
+  from {
+    left: 0;
+  }
+  to {
+    left: 40%;
+  }
+}
+.-menu-list-active {
+  left: 40px;
+  animation: movetoleft 3s forwards;
+}
+
+@keyframes movetoleft {
+  from {
+    left: 50px;
+  }
+  to {
+    left: 40px;
+  }
+}
+.main-container {
+  height: 100%;
+}
+
+.notifications {
+  width: 90%;
+  height: 25%;
+  padding: 30px 0 30px 50px;
+}
+
+.notifications p:nth-child(1) {
+  font-size: 11px;
+}
+
+.notifications p:nth-child(2) {
+  font-size: 14px;
+}
+
+.timeline {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 80%;
+  top: 60px;
+  left: 30px;
+}
+
+.vertical-line-first {
+  height: 28px;
+  width: 3px;
+  background-color: #B2DAFF;
+}
+
+.vertical-line {
+  height: 25%;
+  width: 3px;
+  background-color: #B2DAFF;
+}
+
+.vertical-line-last {
+  height: 44px;
+  width: 3px;
+  background-color: #B2DAFF;
+}
+
+.circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid #5F98CD;
+  margin: 2px 0;
+}
+
+/*# sourceMappingURL=index.css.map */
