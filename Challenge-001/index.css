@@ -1,0 +1,167 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top right, #EEBE6C 0%, #CA7C4E 100%);
+}
+
+.container {
+  margin: 50px 40px;
+  display: flex;
+  width: 100%;
+  background-color: white;
+}
+
+.left {
+  width: 60%;
+}
+
+.right {
+  width: 40%;
+  display: grid;
+  grid-gap: 2px;
+}
+
+.profile-container,
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 50%;
+}
+
+.profile-container {
+  padding: 8px 0;
+}
+
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
+.avatar:hover .circle.small {
+  transform: rotate(360deg);
+}
+.avatar:hover .circle.big {
+  transform: rotate(-360deg);
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid #78644f;
+  transition: all 1.5s ease-in-out;
+}
+
+.small {
+  width: 84px;
+  height: 84px;
+  border-left-color: transparent;
+}
+
+.big {
+  width: 92px;
+  height: 92px;
+  border-right-color: transparent;
+}
+
+img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+}
+
+.title {
+  text-align: center;
+}
+
+.title h4 {
+  font-size: 15px;
+}
+
+.title p {
+  font-size: 12px;
+}
+
+.buttons-container {
+  justify-content: center;
+  height: 50%;
+  width: 100%;
+}
+
+.btn-follow,
+.btn-message {
+  width: 120px;
+  height: 30px;
+  border-radius: 15px;
+  border: 1px solid #78644f;
+  background-color: white;
+  font-weight: 700;
+  color: #78644f;
+}
+
+button:hover {
+  cursor: pointer;
+  color: white;
+  background: #78644f;
+}
+
+.btn-message {
+  margin-top: 10px;
+}
+
+.right section {
+  background-color: #F5E8DF;
+  color: #0c000c;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section:hover {
+  cursor: pointer;
+  background: #e6d8cd;
+}
+
+.right section:nth-child(2) {
+  margin: 2px 0;
+}
+
+/*# sourceMappingURL=index.css.map */
