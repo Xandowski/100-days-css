@@ -1,0 +1,104 @@
+@import '../Generic/reset.css';
+body {
+  background-color: black;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 3px;
+  filter: contrast(30);
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-bubble {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #5C8DDF;
+  filter: blur(6px);
+}
+
+.bubble1 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #5C8DDF;
+  border-radius: 50%;
+  animation: moving 8s linear infinite;
+  transform-origin: 15px 0px;
+}
+
+.bubble2 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 20%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #5C8DDF;
+  border-radius: 50%;
+  animation: circular-motion 4s infinite;
+  transform-origin: 10px 5px;
+}
+
+.bubble3 {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 40%;
+  left: 60%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #5C8DDF;
+  border-radius: 50%;
+  animation: circular-motion 6s infinite;
+  transform-origin: 15px 0px;
+}
+
+@keyframes moving {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes circular-motion {
+  0% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
