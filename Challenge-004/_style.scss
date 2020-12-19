@@ -1,0 +1,111 @@
+@import '../Tools/tools.scss';
+
+$primary-color: #303C5D;
+$second-color: #1A2238;
+$third-color: #26314F;
+
+body {
+  background-color: black;
+}
+
+.frame {
+  @include frame;
+}
+
+.center {
+  @include center;
+}
+
+.climate {
+  width: 100%;
+  height: 80%;
+  background-color: $second-color;
+}
+
+.info-container {
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  display: flex;
+  z-index: 4;
+}
+
+.aditional-info {
+  @include flex-between;
+  width: 80%;
+  height: 100%;
+  padding: 0 30px 0 10px;
+}
+
+.actual-temp {
+  width: 20%;
+  height: 100%;
+  @include flex-center;
+  font-size: 38px;
+}
+
+.circle {
+  width: 280px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.circle1 {
+  background-color: $primary-color;
+  position: absolute;
+  bottom: -10%;
+  left: 20%;
+  z-index: 2;
+}
+
+.circle2 {
+  background-color: $primary-color;
+  position: absolute;
+  bottom: -15%;
+  left: -25%;
+  z-index: 2;
+}
+
+.circle3{
+  background-color: $primary-color;
+  position: absolute;
+  bottom: -15%;
+  right: -40%;
+  z-index: 2;
+}
+
+.circle4{
+  position: absolute;
+  background-color: $third-color;
+  z-index: 1;
+  bottom: -5%;
+  left: -10%;
+}
+
+.circle5{
+  position: absolute;
+  background-color: $third-color;
+  z-index: 1;
+  bottom: -5%;
+  right: -20%;
+}
+
+.sun {
+  position: absolute;
+  background-color: #F6EDBD;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  top: 10%;
+  left: 10%;
+  box-shadow:
+    inset 0 0 60px whitesmoke,
+    inset 20px 0 80px #f0f,
+    inset -20px 0 80px #0ff,
+    inset 20px 0 300px #f0f,
+    inset -20px 0 300px #0ff,
+    0 0 50px #fff,
+    -10px 0 80px #f0f,
+    10px 0 80px #0ff;
+}
