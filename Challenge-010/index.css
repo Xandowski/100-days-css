@@ -1,0 +1,194 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background: linear-gradient(45deg, #3B92AE, #5BA05C);
+}
+
+.center {
+  border-radius: 3px;
+  box-shadow: 3px 3px 3px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  width: 75%;
+  height: 70%;
+  background: white;
+}
+.center .title {
+  width: 100%;
+  opacity: 0.8;
+  text-align: center;
+}
+.center .bar {
+  position: absolute;
+  width: 70%;
+  height: 2px;
+  background-color: rgba(128, 128, 128, 0.281);
+  top: 112px;
+  transition: all 3s ease-out;
+  transform: scaleX(0);
+  transform-origin: 0 0;
+}
+.center .-bar-active {
+  transform: scaleX(1) translate3d(0, 0, 0);
+  background-color: #6ECE3B;
+}
+.center .dropzone {
+  position: relative;
+  width: 100px;
+  height: 80px;
+  border: 1px dashed rgba(0, 0, 0, 0.493);
+  user-select: none;
+  opacity: 0.8;
+  border-radius: 2px;
+  background-image: url("https://100dayscss.com/codepen/upload.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  outline: none;
+  z-index: 2;
+}
+.center .dropzone::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.center .dropzone:active::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+}
+.center .-dropzone-active {
+  background-image: none;
+}
+.center .-dropzone-syncing {
+  border: none;
+  background-image: url("https://100dayscss.com/codepen/syncing.svg");
+  animation: syncing 3.2s ease-in-out;
+  transition: background-image 1s ease-in-out;
+}
+@keyframes syncing {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+.center .-dropzone-done {
+  border: none;
+  background-image: url("https://100dayscss.com/codepen/checkmark.svg");
+  animation: none;
+}
+.center .filename {
+  position: absolute;
+  display: block;
+  color: #676767;
+  width: 90px;
+  height: 40px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+  word-wrap: break-word;
+  overflow-y: hidden;
+  z-index: 1;
+}
+.center .btn {
+  width: 140px;
+  position: relative;
+  height: 40px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  background-color: #6ECE3B;
+  box-shadow: 0px 3px 0px 0 rgba(0, 0, 0, 0.479);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.center .btn:hover {
+  cursor: pointer;
+  box-shadow: 0 2px 0 0 #498C25, 0 2px 10px 0 #6ECE3B;
+}
+
+/*# sourceMappingURL=index.css.map */
