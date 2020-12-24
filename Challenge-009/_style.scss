@@ -1,0 +1,136 @@
+.frame {
+  @include frame;
+  @include flex-center;
+  background-color: #4B4841;
+}
+
+.center {
+  @include flex-center;
+  background-color: #FFCE4E;
+  width: 80%;
+  height: 50%;
+  border-radius: 3px;
+  box-shadow: 5px 5px 5px 5px #312F2B;
+  transition: transform 1.5s;
+  transform-style: preserve-3d;
+
+  .faixa {
+    position: absolute;
+    z-index: 2;
+    width: 20px;
+    height: 3px;
+    background-color: #43413B;
+    bottom: 32%;
+    right: 0;
+    animation: 1.5s movefaixa infinite;
+  }
+
+  @keyframes movefaixa {
+    0% {
+      right: 0;
+    }
+    
+    20% {
+      right: 40%;
+    }
+
+    40% {
+      right: 60%;
+    }
+
+    60% {
+      right: 80%;
+    }
+
+    80% {
+      right: 100%;
+    }
+  }
+
+  .bike,
+  .helicopter {
+    position: absolute;
+    backface-visibility: hidden;
+    background-color: #FFCE4E;
+    width: 131px;
+    height: 76px;
+  }
+
+  .bike {
+    @include flex-center;
+    z-index: 2;
+    perspective: 1000px;
+
+    img {
+      position: relative;
+      animation: bikemove .6s ease-in-out infinite;
+      transform-origin: 50% 100%;
+    }
+  }
+
+
+  .helicopter {
+    transform: rotateX(180deg);
+
+    img {
+      position: relative;
+      z-index: 1;
+      animation: helicoptermove 1.5s ease-in-out infinite;
+      animation-fill-mode: both;
+    }
+
+    .sky {
+			position: absolute;
+			top: 0;
+			// left: 80px;
+			bottom: 0;
+			width: 160px;
+			overflow: hidden;
+			
+			@for $i from 1 through 9 {
+				.cloud-#{$i} {
+					position: absolute;
+					right: -25px;
+					top: (20 + $i * 14) + px;
+					height: 3px;
+					width: (10 + random(150) / 10) + px;
+					background: #4B4841;
+					border-radius: 3px;
+					animation: cloud (0.6 + random(2) / 10) + s linear (random(10) / 10) + s infinite;
+        }
+      }
+
+      @keyframes cloud {
+        0% {
+          transform: translate3d(0, 0, 0) scaleX(1);
+        }
+        100% {
+          transform: translate3d(-210px,0,0) scaleX(.8);
+        }
+      }
+    }
+  }
+
+  &:hover {
+    transform: rotateX(180deg);
+    cursor: pointer;
+  }
+
+  @keyframes bikemove {
+    0%, 100% {
+      transform: scaleY(1);
+    }
+    50% {
+      transform: scaleY(1.03);
+    }
+  }
+
+  @keyframes helicoptermove {
+    0%, 100% {
+      transform: translate3d(0,-5px,0);
+    }
+    50% {
+      transform: translate3d(0,5px,0);
+    }
+  }
+}
