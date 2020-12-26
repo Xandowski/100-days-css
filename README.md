@@ -18,5 +18,6 @@ My goal with this challenge is to improve my CSS skills, not necessarily launchi
 * [x] [Challenge-008](/Challenge-008) - 22/12/20 - 23/12/20
 * [x] [Challenge-009](/Challenge-009) - 23/12/20
 * [x] [Challenge-010](/Challenge-010) - 24/12/20
+* [x] [Challenge-011](/Challenge-011) - 26/12/20
 
 <strong>OBS</strong>: The order of the challenges are not the same as the site, because I started with challenge 006.
