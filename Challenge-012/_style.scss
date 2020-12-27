@@ -1,0 +1,40 @@
+.frame {
+  @include frame;
+  @include flex(center, row);
+  background-image: repeating-linear-gradient(45deg, #353535, white 3% 6%);
+}
+
+.center {
+  @include center;
+  @include flex(center, row);
+  width: 60%;
+  height: 60%;
+  background-color: #353535;
+  box-shadow: 8px 10px 15px 0 rgba(0,0,0,0.3);
+}
+
+svg {
+  width: 160px;
+  height: 140px;
+
+  .first,
+  .second,
+  .third {
+    transition: all .5s ease-in-out;
+  }
+
+  &:hover {
+    .first {
+      fill: #AAAAAA;
+      stroke: #AAAAAA;
+    }
+    .second {
+      fill: #CCCCCC;
+      stroke: #CCCCCC;
+    }
+    .third {
+      fill: #fff;
+      stroke: #fff;
+    }
+  }
+}
