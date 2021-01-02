@@ -1,0 +1,99 @@
+.frame {
+  @include frame;
+  background-color: #213541;
+  @include flex(center, column);
+  color: white;
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.text {
+  font-size: 24px;
+  text-align: center;
+}
+
+.progress {
+  font-size: 26px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.kcal {
+  // position: relative;
+	width: 114px;
+	height: 114px;
+  @include flex(center, column);
+  margin: 30px 0;
+  // margin: 30px auto 25px auto;
+
+  & p:nth-child(1){
+    font-size: 24px;
+  }
+
+  & p:nth-child(2){
+    font-size: 14px;
+    color: gray;
+  }
+
+  
+  .kcal-ring {
+		width: 120px;
+    height: 120px;
+    position: absolute;
+
+    
+    .kcal-ring-progress {
+      stroke-dasharray: 326;
+      stroke-dashoffset: 50;
+      transform: rotate(-90deg);
+      transform-origin: 50% 50%;
+    }
+	}
+}
+
+.row-3 {
+  @include flex(center, row);
+}
+
+.steps,
+.km {
+  @include flex(center, column);
+
+  & p:nth-child(1){
+    font-size: 18px;
+  }
+
+  & p:nth-child(2){
+    font-size: 14px;
+    color: gray;
+  }
+}
+
+.km {
+  margin-left: 80px;
+}
+
+.steps-ring,
+.km-ring {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+}
+
+.steps-ring {
+  .steps-ring-progress{
+    stroke-dasharray: 201;
+    stroke-dashoffset: 60;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+}
+
+.km-ring {
+  .km-ring-progress{
+    stroke-dasharray: 201;
+    stroke-dashoffset: 110;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+}
