@@ -1,0 +1,187 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  color: #333;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: #1F8DE4;
+}
+
+.map,
+.marker,
+.ring,
+.card {
+  position: absolute;
+}
+
+.marker {
+  cursor: pointer;
+  z-index: 5;
+  transform: perspective(600px) rotateY(0deg);
+  opacity: 1;
+  transition: all 0.5s ease 0.4s;
+}
+.marker.-inactive {
+  transform: perspective(600px) rotateY(-90deg);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.marker svg {
+  animation: hovering 1s ease-in-out infinite alternate;
+}
+.marker .shadow {
+  width: 18px;
+  height: 4px;
+  background: #1B7AC7;
+  border-radius: 50%;
+  margin: 5px auto 0 auto;
+  animation: shadow 1s ease-in-out infinite alternate;
+}
+
+.card {
+  position: absolute;
+  z-index: 10;
+  width: 240px;
+  height: 190px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 4px 8px 12px 0 rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transform: perspective(600px) rotateY(90deg);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease;
+}
+.card.-active {
+  transform: perspective(600px) rotateY(0deg);
+  opacity: 1;
+  pointer-events: all;
+  transition: all 0.5s ease 0.4s;
+}
+.card img {
+  margin-bottom: 18px;
+}
+.card p {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  margin: 2px 0;
+}
+.card p.name {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 600;
+}
+.card .actions {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+}
+.card .actions a {
+  float: left;
+  width: 50%;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none;
+  color: #1F8DE4;
+  font-weight: 400;
+  font-size: 12px;
+}
+.card .actions .divide {
+  position: absolute;
+  width: 1px;
+  height: 20px;
+  left: 50%;
+  top: 10px;
+  background: #91CCFB;
+}
+
+@keyframes hovering {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(0, -5px, 0);
+  }
+}
+@keyframes shadow {
+  from {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.25) translate3d(0, 0, 0);
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
